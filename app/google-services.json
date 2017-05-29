@@ -1,0 +1,275 @@
+{
+  "project_info": {
+    "project_number": "533929769590",
+    "firebase_url": "https://ctracker-e1d07.firebaseio.com",
+    "project_id": "ctracker-e1d07",
+    "storage_bucket": "ctracker-e1d07.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533929769590:android:7ef233287096448c",
+        "android_client_info": {
+          "package_name": "igorgrabarski.com.ctrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "533929769590-7u6uas1vq1h7eg3gllf2v9uq7pvmintk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "igorgrabarski.com.ctrack",
+            "certificate_hash": "4f11ab8bd6a34b20b6f55a269efab217eceba773"
+          }
+        },
+        {
+          "client_id": "533929769590-375uf4s28facgiaccdoo0bd5224rh30l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWfwuRplcUJnpaJqphAs5baZT9E-hJEGQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "533929769590-375uf4s28facgiaccdoo0bd5224rh30l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533929769590:android:48d9469521d37225",
+        "android_client_info": {
+          "package_name": "igorgrabarski.com.ctrackmonitor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "533929769590-05a9j0oh8svgcr26k3cm346gjfguejjr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "igorgrabarski.com.ctrackmonitor",
+            "certificate_hash": "4f11ab8bd6a34b20b6f55a269efab217eceba773"
+          }
+        },
+        {
+          "client_id": "533929769590-375uf4s28facgiaccdoo0bd5224rh30l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWfwuRplcUJnpaJqphAs5baZT9E-hJEGQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "533929769590-375uf4s28facgiaccdoo0bd5224rh30l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533929769590:android:99e7a8cf5d6a2358",
+        "android_client_info": {
+          "package_name": "igorgrabarski.com.ctrackclient"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "533929769590-oqg9v6auq0iejvchib9fqho2ph6k6ure.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "igorgrabarski.com.ctrackclient",
+            "certificate_hash": "4f11ab8bd6a34b20b6f55a269efab217eceba773"
+          }
+        },
+        {
+          "client_id": "533929769590-375uf4s28facgiaccdoo0bd5224rh30l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWfwuRplcUJnpaJqphAs5baZT9E-hJEGQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "533929769590-375uf4s28facgiaccdoo0bd5224rh30l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533929769590:android:ec7b57612d720baa",
+        "android_client_info": {
+          "package_name": "igorgrabarski.com.ctrackspy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "533929769590-ssn0i5s6h873jo5na7i526chdtv50q62.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "igorgrabarski.com.ctrackspy",
+            "certificate_hash": "4f11ab8bd6a34b20b6f55a269efab217eceba773"
+          }
+        },
+        {
+          "client_id": "533929769590-375uf4s28facgiaccdoo0bd5224rh30l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWfwuRplcUJnpaJqphAs5baZT9E-hJEGQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "533929769590-375uf4s28facgiaccdoo0bd5224rh30l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533929769590:android:cfc5358f38929321",
+        "android_client_info": {
+          "package_name": "igorgrabarski.com.ctracklistener"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "533929769590-e5jooc87899r89p001bh1tt437fcc4d8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "igorgrabarski.com.ctracklistener",
+            "certificate_hash": "4f11ab8bd6a34b20b6f55a269efab217eceba773"
+          }
+        },
+        {
+          "client_id": "533929769590-375uf4s28facgiaccdoo0bd5224rh30l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWfwuRplcUJnpaJqphAs5baZT9E-hJEGQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "533929769590-375uf4s28facgiaccdoo0bd5224rh30l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533929769590:android:91fe677628331a08",
+        "android_client_info": {
+          "package_name": "igorgrabarski.com.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "533929769590-0ddjue78r0o8a4fci2cpbdimohlq85n0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "igorgrabarski.com.myapplication",
+            "certificate_hash": "4f11ab8bd6a34b20b6f55a269efab217eceba773"
+          }
+        },
+        {
+          "client_id": "533929769590-375uf4s28facgiaccdoo0bd5224rh30l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWfwuRplcUJnpaJqphAs5baZT9E-hJEGQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "533929769590-375uf4s28facgiaccdoo0bd5224rh30l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
