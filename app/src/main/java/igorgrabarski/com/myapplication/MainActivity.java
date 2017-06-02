@@ -38,8 +38,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private double lng;
     private Date date;
     private String dateTime;
-    private int cid;
-    private int lac;
+    private long cid;
+    private long lac;
+
+    private final int ZOOM = 23;
+    private final int MINIMAL_ZOOM = 1;
+    private final String LOCATION_REF = "location";
+    private final String LAT_REF = "lat";
+    private final String LNG_REF = "lng";
+    private final String CURRENT_DATE_TIME_REF = "currentDateTime";
+    private final String DATE_REF = "date";
+    private final String MONTH_REF = "month";
+    private final String YEAR_REF = "year";
+    private final String HOURS_REF = "hours";
+    private final String MINUTES_REF = "minutes";
+    private final String SECONDS_REF = "seconds";
+    private final String LAC_REF = "lac";
+    private final String CID_REF = "cid";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,12 +101,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (s.length() > 0) {
-                    if (Integer.valueOf(s.toString()) < 1) {
-                        etZoom.setText("1");
+                    if (Integer.valueOf(s.toString()) < MINIMAL_ZOOM) {
+                        etZoom.setText(String.valueOf(MINIMAL_ZOOM));
                         sbZoom.setProgress(1);
-                    } else if (Integer.valueOf(s.toString()) > 23) {
-                        etZoom.setText("23");
-                        sbZoom.setProgress(23);
+                    } else if (Integer.valueOf(s.toString()) > ZOOM) {
+                        etZoom.setText(String.valueOf(ZOOM));
+                        sbZoom.setProgress(ZOOM);
                     } else {
                         sbZoom.setProgress(Integer.valueOf(s.toString()));
                     }
@@ -105,23 +120,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
 
-        final DatabaseReference myRef = database.getReference("location");
+        final DatabaseReference myRef = database.getReference(LOCATION_REF);
         myRef.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                if(dataSnapshot.getKey().equals("lat")){
-                    lat = (double) dataSnapshot.getValue();
+                if(dataSnapshot.getKey().equals(LAT_REF)){
+                    lat =  dataSnapshot.getValue(Double.class);
                 }
-                else if(dataSnapshot.getKey().equals("lng")){
-                    lng = (double) dataSnapshot.getValue();
+                else if(dataSnapshot.getKey().equals(LNG_REF)){
+                    lng =  dataSnapshot.getValue(Double.class);
                 }
-                else if(dataSnapshot.getKey().equals("currentDateTime")){
-                    dateTime = dataSnapshot.child("date").getValue(Long.class) + "." +
-                            dataSnapshot.child("month").getValue(Long.class) + "." +
-                            dataSnapshot.child("year").getValue(Long.class) + " " +
-                            dataSnapshot.child("hours").getValue(Long.class) + ":" +
-                            dataSnapshot.child("minutes").getValue(Long.class) + ":" +
-                            dataSnapshot.child("seconds").getValue(Long.class);
+                else if(dataSnapshot.getKey().equals(CURRENT_DATE_TIME_REF)){
+                    dateTime = dataSnapshot.child(DATE_REF).getValue(Long.class) + "." +
+                            dataSnapshot.child(MONTH_REF).getValue(Long.class) + "." +
+                            dataSnapshot.child(YEAR_REF).getValue(Long.class) + " " +
+                            dataSnapshot.child(HOURS_REF).getValue(Long.class) + ":" +
+                            dataSnapshot.child(MINUTES_REF).getValue(Long.class) + ":" +
+                            dataSnapshot.child(SECONDS_REF).getValue(Long.class);
+                }
+                else if(dataSnapshot.getKey().equals(LAC_REF)){
+                    lac = dataSnapshot.getValue(Long.class);
+                }
+                else if(dataSnapshot.getKey().equals(CID_REF)){
+                    cid = dataSnapshot.getValue(Long.class);
+                }
+
+                if(cid != -1 || lac != -1){
+                    tvInfo.setText("CellID: " + cid + "  " + "Lac: " + lac);
                 }
             }
 
@@ -149,7 +174,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         myRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                if (dataSnapshot.child("lat") != null && dataSnapshot.child("lng") != null) {
+                if (dataSnapshot.child("lat").getValue(Double.class) != -1 && dataSnapshot.child("lng").getValue(Double.class) != -1) {
                     lat = (double) dataSnapshot.child("lat").getValue();
                     lng = (double) dataSnapshot.child("lng").getValue();
                     date = dataSnapshot.child("currentDateTime").getValue(Date.class);
@@ -160,10 +185,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             date.getMinutes() + ":" +
                             date.getSeconds();
                     pbLoad.setVisibility(View.INVISIBLE);
+                    btnShow.setEnabled(true);
                 }
-                else if(dataSnapshot.child("cid") != null && dataSnapshot.child("lac") != null){
-                    cid = (int) dataSnapshot.child("cid").getValue();
-                    lac = (int) dataSnapshot.child("lac").getValue();
+                else if(dataSnapshot.child("cid").getValue(Long.class) != -1 && dataSnapshot.child("lac").getValue(Long.class) != -1){
+                    cid = (long) dataSnapshot.child("cid").getValue();
+                    lac = (long) dataSnapshot.child("lac").getValue();
                     tvInfo.setText("CellID: " + cid + "  " + "Lac: " + lac);
                 }
             }
